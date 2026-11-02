@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cake Mystery | The Missing Cake · jQuery Assignment 6</title>
+  <meta name="description" content="An interactive birthday party detective mystery using jQuery: find the missing cake with 20 selector cases and animated guest cards." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="club-identity" href="#top" aria-label="Go to top">
+      <span class="club-mark" aria-hidden="true"><span>C</span><small>?</small></span>
+      <span class="identity-copy"><strong>CAKE MYSTERY</strong><small>THE MISSING CAKE · WEB LAB 06</small></span>
+    </a>
+    <span class="header-label"><span class="pulse-dot"></span> jQuery / Selectors / Effects</span>
+  </header>
+
+  <main id="top" class="page-shell">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-main">
+        <span class="eyebrow"><span class="eyebrow-line"></span> BIRTHDAY PARTY INVESTIGATION <span class="small-num">/ ASSIGNMENT #6</span></span>
+        <h1 id="title">CAKE <em>MYSTERY</em><span class="heading-period">.</span></h1>
+        <p class="hero-lead">Four rooms. Twenty-one guests. One missing cake. Investigate the birthday party, follow the clues, and solve the mystery with jQuery.</p>
+        <div class="hero-meta"><span>19:30 <b>—</b> 22:30</span><span>4 ROOMS</span><span>20 DETECTIVE CASES</span></div>
+      </div>
+      <div class="hero-score" aria-label="Party details">
+        <span>THE INCIDENT</span>
+        <strong>21<span>:</span>30</strong>
+        <p>CAKE DISAPPEARED</p>
+        <div class="score-minibar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <div class="workspace-layout">
+      <section class="workspace-main" aria-label="Interactive party house">
+        <div class="section-titlebar"><div><span class="section-kicker">01 / THE SCENE</span><h2>Birthday party house</h2></div><span id="live-guest-count" class="section-caption">21 GUESTS ON SITE</span></div>
+        <div class="house-frame">
+          <div class="house-top"><span class="house-top-icon">◆</span><span>TWO FLOORS · FOUR ROOMS</span><span>BIRTHDAY PARTY / 2026</span></div>
+          <div id="house" class="house" aria-label="Party rooms populated using jQuery"></div>
+          <div class="house-bottom"><span class="pitch-marking"></span> FOLLOW THE CLUES. FIND THE MISSING CAKE. <span class="pitch-marking"></span></div>
+        </div>
+
+        <div class="legend-bar" aria-label="Visual legend">
+          <span class="legend-title">LEGEND</span>
+          <div class="legend-item"><span class="color-dots"><i class="c-red"></i><i class="c-blue"></i><i class="c-green"></i><i class="c-black"></i><i class="c-yellow"></i><i class="c-purple"></i></span> Clothing</div>
+          <div class="legend-item"><b class="symbol-uni">📱</b> Phone</div>
+          <div class="legend-item"><b class="symbol-uni">👓</b> Glasses</div>
+          <div class="legend-item"><b class="symbol-uni">👜</b> Bag</div>
+          <div class="legend-item"><b class="symbol-uni">☕</b> Cup</div>
+          <div class="legend-item"><b class="symbol-uni">🍰</b> Crumbs</div>
+          <div class="legend-item"><span class="student-dot">★</span> AITU</div>
+        </div>
+
+        <div class="toolstrip"><div><span class="toolstrip-dot"></span><span>Tap any guest to inspect their profile. Use room controls to sort or move guests.</span></div><button id="reset-button" class="subtle-action" type="button">↺ Reset entire party</button></div>
+      </section>
+
+      <aside class="investigation-panel" aria-labelledby="cases-heading">
+        <div class="panel-top"><span class="section-kicker">02 / INVESTIGATION DESK</span><h2 id="cases-heading">Case files <span>20</span></h2><p>Each case searches the live page with one jQuery selector chain, not the data array.</p></div>
+        <div class="case-scroll"><div id="case-list" class="case-list" aria-label="Detective cases"></div></div>
+        <div class="panel-footer"><button id="clear-button" type="button" class="clear-button">CLEAR SPOTLIGHT <span>↗</span></button><span>Task 1 + Task 2</span></div>
+      </aside>
+    </div>
+
+    <section class="result-panel" aria-live="polite">
+      <div class="result-icon">◎</div>
+      <div class="result-copy"><span id="result-eyebrow">DETECTIVE CONSOLE</span><h2 id="result-title">Select a case to begin.</h2><p id="result-detail">Found guests stay bright. Everyone else fades to 20% opacity.</p><code id="result-code">$('.guest') // the real DOM is our evidence</code></div>
+      <div id="result-count" class="result-figure">—</div>
+    </section>
+  </main>
+
+  <div id="modal-layer" aria-live="polite"></div>
+  <script src="vendor/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
